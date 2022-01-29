@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number">
+<button onclick="daoNguoc()">Dao nguoc</button>
+</body>
+</html>
+<script>
+    let number;
+    let n2;
+    let number2;
+    function daoNguoc() {
+        number = document.getElementById('number').value;
+        number2 = number;
+        for (let i = 0; i < number.length; i++) {
+            console.log('i ========== ',i)
+            n2 = number2%10;
+            number2 = Math.floor(number2/10);
+            console.log('number2 = ', number2)
+            document.write(n2)
+        }
+    }
+</script>
